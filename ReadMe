@@ -1,4 +1,4 @@
-# My Super Project
+# FastAPI Databases
 
 This project demonstrates how to create a basic FastAPI application with a SQLAlchemy database backend. This can be used to access and update a client database with the option to add new clients, items, or transactions.
 
