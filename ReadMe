@@ -1,0 +1,80 @@
+# My Super Project
+
+This project demonstrates how to create a basic FastAPI application with a SQLAlchemy database backend. This can be used to access and update a client database with the option to add new clients, items, or transactions.
+
+The project is structured with the following components:
+
+```
+my_super_project/
+│
+└── sql_app/
+    ├── __init__.py
+    ├── crud.py
+    ├── database.py
+    ├── main.py
+    ├── models.py
+    └── schemas.py
+```
+
+## Getting Started
+
+First, you need to install SQLAlchemy, a powerful SQL toolkit and Object-Relational Mapping (ORM) library for Python. You can do this by running the following command:
+
+```bash
+pip install sqlalchemy
+```
+
+### Database Configuration
+
+In the `/database.py` file, you can configure your database connection. The example provided uses SQLite, but you can easily change the connection URL to your preferred database system (e.g., PostgreSQL, MySQL).
+
+
+### Creating a Database Session
+
+In the same file, a `SessionLocal` class is created, which represents a database session. This class should be used to interact with the database. The provided `Base` class is used for creating SQLAlchemy models.
+
+### SQLAlchemy Models
+
+In the `/models.py` file, you'll define your database models. For example, the project includes two models: `User` and `Item`. You can customize these models or add more models as needed.
+
+You can create your own models and define their attributes as needed.
+
+### Pydantic Models
+
+In the `/schemas.py` file, you'll find Pydantic models that define the request and response data structures for your API. For instance, you have `UserBase`, `UserCreate`, `User`, `ItemBase`, `ItemCreate`, and `Item` Pydantic models.
+
+These Pydantic models define the structure of data being sent to and received from your API endpoints.
+
+### CRUD Operations
+
+The `sql_app/crud.py` file contains utility functions for performing CRUD (Create, Read, Update, Delete) operations on the database. You can see functions to get users, create users, and get items, among others. You can modify or extend these functions to suit your needs.
+
+### Main FastAPI Application
+
+The `/main.py` file is where the FastAPI application is defined. It integrates all the components mentioned above, creating API endpoints to perform operations on the database.
+
+This is just a simple example of a FastAPI application with SQLAlchemy integration. You can extend this application by adding more routes, CRUD operations, and custom business logic as per your project requirements.
+
+## Running the Application
+
+To run the FastAPI application, navigate to the directory and use the `uvicorn` command:
+
+```bash
+uvicorn main:app --reload
+```
+
+This will start the FastAPI development server, and you can access your API at http://localhost:8000.
+
+## API Documentation
+
+FastAPI automatically generates interactive API documentation for your application. You can access it at http://localhost:8000/docs, and you'll be able to test your API endpoints from there.
+
+## Conclusion
+
+This project is a basic example of a FastAPI application with SQLAlchemy integration, showcasing how to structure your project and perform common database operations. You can extend it to build more complex and feature-rich applications.
+
+Contact Information
+For questions, please contact jordanphilipelias@gmail.com.
+
+Acknowledgments
+We acknowledge the use of third-party libraries and frameworks that have contributed to the success of this project. Thank you to the open-source community for their invaluable contributions.
